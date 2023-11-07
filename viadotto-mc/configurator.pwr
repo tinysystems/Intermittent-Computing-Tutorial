@@ -1,0 +1,995 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                        Xilinx XPower Analyzer                                                                         |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Release                | 14.7 - P.20131013 (lin64)                                                                                                                    |
+| Command Line           | /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/xpwr -intstyle ise -v -l 1000 -ol std configurator.ncd configurator.pcf -o configurator.pwr  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------
+|      Table of Contents       |
+--------------------------------
+| 1.  Settings                 |
+| 1.1.  Project                |
+| 1.2.  Device                 |
+| 1.3.  Environment            |
+| 1.4.  Default Activity Rates |
+| 2.  Summary                  |
+| 2.1.  On-Chip Power Summary  |
+| 2.2.  Thermal Summary        |
+| 2.3.  Power Supply Summary   |
+| 2.4.  Confidence Level       |
+| 3.  Detailed Reports         |
+| 3.1.  By Hierarchy           |
+| 3.2.  By Clock Domain        |
+| 3.3.  By Resource Type       |
+| 3.3.1.  Core Dynamic         |
+| 3.3.1.1.  Logic              |
+| 3.3.1.2.  Signals            |
+| 3.3.1.3.  BRAM               |
+| 3.3.2.  IO                   |
+| 4.  Warnings                 |
+--------------------------------
+
+1.  Settings
+1.1.  Project
+------------------------------------------------
+|                   Project                    |
+------------------------------------------------
+| Design File               | configurator.ncd |
+| Settings File             | NA               |
+| Physical Constraints File | configurator.pcf |
+| Simulation Activity File  | NA               |
+| Design Nets Matched       | NA               |
+| Simulation Nets Matched   | NA               |
+------------------------------------------------
+
+1.2.  Device
+-------------------------------------------------
+|                    Device                     |
+-------------------------------------------------
+| Family           | Spartan6                   |
+| Part             | xc6slx16l                  |
+| Package          | csg324                     |
+| Temp Grade       | C-Grade                    |
+| Process          | Typical                    |
+| Speed Grade      | -1L                        |
+| Characterization | Production,v1.3,2011-05-04 |
+-------------------------------------------------
+
+1.3.  Environment
+---------------------------
+|       Environment       |
+---------------------------
+| Ambient Temp (C) | 25.0 |
+| Use custom TJA?  | No   |
+| Custom TJA (C/W) | NA   |
+| Airflow (LFM)    | 0    |
+| Heat Sink        | None |
+| Custom TSA (C/W) | NA   |
+---------------------------
+
+1.4.  Default Activity Rates
+----------------------------------
+|     Default Activity Rates     |
+----------------------------------
+| FF Toggle Rate (%)     | 12.5  |
+| I/O Toggle Rate (%)    | 12.5  |
+| Output Load (pF)       | 5.0   |
+| I/O Enable Rate (%)    | 100.0 |
+| BRAM Write Rate (%)    | 50.0  |
+| BRAM Enable Rate (%)   | 50.0  |
+| DSP Toggle Rate (%)    | 12.5  |
+----------------------------------
+
+2.  Summary
+2.1.  On-Chip Power Summary
+-----------------------------------------------------------------------------
+|                           On-Chip Power Summary                           |
+-----------------------------------------------------------------------------
+|        On-Chip        | Power (mW) |  Used  | Available | Utilization (%) |
+-----------------------------------------------------------------------------
+| Clocks                |       0.40 |      1 |    ---    |       ---       |
+| Logic                 |       0.00 |     85 |      9112 |               1 |
+| Signals               |       0.00 |    309 |    ---    |       ---       |
+| IOs                   |       0.00 |    131 |       232 |              56 |
+| BlockRAM/FIFO         |       0.00 |  ---   |    ---    |       ---       |
+|   8K BlockRAM         |       0.00 |      0 |        64 |               0 |
+|   16K BlockRAM        |       0.00 |      1 |        32 |               3 |
+| Static Power          |      16.08 |        |           |                 |
+| Total                 |      16.48 |        |           |                 |
+-----------------------------------------------------------------------------
+
+2.2.  Thermal Summary
+------------------------------
+|      Thermal Summary       |
+------------------------------
+| Effective TJA (C/W) | 27.8 |
+| Max Ambient (C)     | 84.5 |
+| Junction Temp (C)   | 25.5 |
+------------------------------
+
+2.3.  Power Supply Summary
+---------------------------------------------------------
+|                 Power Supply Summary                  |
+---------------------------------------------------------
+|                      | Total | Dynamic | Static Power |
+---------------------------------------------------------
+| Supply Power (mW)    | 16.48 | 0.40    | 16.08        |
+---------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------------
+|                                            Power Supply Currents                                            |
+---------------------------------------------------------------------------------------------------------------
+|     Supply Source     | Supply Voltage | Total Current (mA) | Dynamic Current (mA) | Quiescent Current (mA) |
+---------------------------------------------------------------------------------------------------------------
+| Vccint                |          1.000 |               4.43 |                 0.40 |                   4.03 |
+| Vccaux                |          2.500 |               2.82 |                 0.00 |                   2.82 |
+| Vcco25                |          2.500 |               2.00 |                 0.00 |                   2.00 |
+---------------------------------------------------------------------------------------------------------------
+
+2.4.  Confidence Level
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|                                                                                            Confidence Level                                                                                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|       User Input Data       | Confidence |                    Details                     |                                                   Action                                                   |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Design implementation state | High       | Design is completely routed                    |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks         |                                                                                                            |
+| I/O nodes activity          | High       | User specified more than 95% of inputs         |                                                                                                            |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                   |                                                                                                            |
+|                             |            |                                                |                                                                                                            |
+| Overall confidence level    | Medium     |                                                |                                                                                                            |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.  Details
+3.1.  By Hierarchy
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|     By Hierarchy     | Power (mW) | Logic Power (mW) | Signal Power (mW) |      # FFs      |     # LUTs      |     # DRAMs     |     # BRAMs     |    # CARRY4s    |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Hierarchy total      |   0.00     |   0.00           |   0.00            |    233          |     60          |      8          |      1          |      7          |
+|   configurator       |   0.00     |   0.00           |   0.00            |      4 /    233 |      0 /     60 |      0 /      8 |      0 /      1 |      0 /      7 |
+|     we_out_reg       |   0.00     |   0.00           |   0.00            |      2          |      0          |      0          |      0          |      0          |
+|     size_reg         |   0.00     |   0.00           |   0.00            |      5          |      0          |      0          |      0          |      0          |
+|     set_bit_register |   0.00     |   0.00           |   0.00            |      2          |      2          |      0          |      0          |      0          |
+|     sb_reg           |   0.00     |   0.00           |   0.00            |      2          |      0          |      0          |      0          |      0          |
+|     s_reg            |   0.00     |   0.00           |   0.00            |      2          |      0          |      0          |      0          |      0          |
+|     r5_reg           |   0.00     |   0.00           |   0.00            |      9          |      0          |      0          |      0          |      0          |
+|     r4_reg           |   0.00     |   0.00           |   0.00            |      9          |      0          |      0          |      0          |      0          |
+|     r3_reg           |   0.00     |   0.00           |   0.00            |      9          |      0          |      0          |      0          |      0          |
+|     r2_reg           |   0.00     |   0.00           |   0.00            |      9          |      0          |      0          |      0          |      0          |
+|     r1_reg           |   0.00     |   0.00           |   0.00            |      9          |      0          |      0          |      0          |      0          |
+|     r0_reg           |   0.00     |   0.00           |   0.00            |      9          |      0          |      0          |      0          |      0          |
+|     ptr_reg          |   0.00     |   0.00           |   0.00            |      5          |      0          |      0          |      0          |      0          |
+|     pc_reg           |   0.00     |   0.00           |   0.00            |     11          |      9          |      0          |      0          |      0          |
+|     incr_b           |   0.00     |   0.00           |   0.00            |     21          |      6          |      0          |      0          |      4          |
+|     incr_a           |   0.00     |   0.00           |   0.00            |     11          |      2          |      0          |      0          |      3          |
+|     decoder          |   0.00     |   0.00           |   0.00            |     62          |      0          |      0          |      0          |      0          |
+|     data_rf          |   0.00     |   0.00           |   0.00            |     16          |     11          |      8          |      0          |      0          |
+|     data_buff        |   0.00     |   0.00           |   0.00            |     16          |      9          |      0          |      0          |      0          |
+|     conf_mem         |   0.00     |   0.00           |   0.00            |      2          |      1          |      0          |      1          |      0          |
+|     comparator       |   0.00     |   0.00           |   0.00            |      1          |      5          |      0          |      0          |      0          |
+|     addr_reg         |   0.00     |   0.00           |   0.00            |     16          |     14          |      0          |      0          |      0          |
+|     en_out_reg       |   0.00     |   0.00           |   0.00            |      1          |      1          |      0          |      0          |      0          |
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.2.  By Clock Domain
+----------------------------------------------------------------------------------------------------------------------
+| By Clock Domain : 1 | Power (mW) | Freq (MHz) | Buffer | Buffer Enable (%) | Enable Signal | Fanout | Slice Fanout |
+----------------------------------------------------------------------------------------------------------------------
+| I_clk_BUFGP/IBUFG   |            |            |        |                   |               |        |              |
+|  Logic:             |            |            |        |                   |               |        |              |
+|   I_clk_BUFGP/BUFG  |       0.37 |       0.00 | BUFG   |                NA | NA            |     NA |           NA |
+|  Nets:              |            |            |        |                   |               |        |              |
+|   I_clk_BUFGP       |       0.03 |       0.00 | BUFG   |                NA | NA            |    247 |           72 |
+|   I_clk_BUFGP/IBUFG |       0.00 |       0.00 | NA     |                NA | NA            |      1 |            1 |
+|                     |            |            |        |                   |               |        |              |
+| Total               |       0.40 |            |        |                   |               |        |              |
+----------------------------------------------------------------------------------------------------------------------
+
+3.3.  By Resource Type
+3.3.1.  Core Dynamic
+3.3.1.1.  Logic
+--------------------------------------------------------------------------------------------------------------------------
+|                         Logic                          | Power (mW) |  Type  | Clock (MHz) | Clock Name  | Signal Rate |
+--------------------------------------------------------------------------------------------------------------------------
+| addr_reg/O_a_uct<10>_rt                                |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<11>_rt                                |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<12>_rt                                |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<13>_rt                                |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<14>_rt                                |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<1>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<2>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<3>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<4>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<5>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<6>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<7>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<8>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct<9>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| addr_reg/O_a_uct_0                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_1                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_10                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_11                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_12                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_13                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_14                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_15                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_2                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_3                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_4                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_5                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_6                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_7                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_8                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| addr_reg/O_a_uct_9                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| comparator/I_a[4]_GND_17_o_equal_2_o53                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| comparator/I_a[4]_GND_17_o_equal_2_o53_SW0             |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| comparator/I_a[4]_GND_17_o_equal_2_o53_SW1             |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| comparator/I_en[0]_I_en_cm_OR_4_o1                     |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| comparator/I_en[0]_I_en_cm_OR_4_o1_1                   |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| comparator/O_en                                        |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| conf_mem/Mram_regs1_ENA_cooolgate_en_gate_8            |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| conf_mem/Mram_regs1_cooolgate_en_gate_2_cooolDelFlop   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| conf_mem/Mram_regs1_cooolgate_en_gate_5_cooolDelFlop   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| d_reg/O_d                                              |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_0                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_1                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_2                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_3                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_4                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_5                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_6                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_buff_7                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_0                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_0_dpot                            |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_1                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_1_dpot                            |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_2                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_2_dpot                            |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_3                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_3_dpot                            |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_4                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_4_dpot                            |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_5                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_5_dpot                            |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_6                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_6_dpot                            |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_buff/O_data_uct_7                                 |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_buff/O_data_uct_7_dpot                            |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_buff/_n0017_inv1                                  |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_rf/Mram_regs1                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs2                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs3                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs4                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs5                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs6                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs7                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/Mram_regs8                                     |       0.00 | DRAM   |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_0                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_1                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_2                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_3                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_4                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_5                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_6                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_cpu_7                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_0                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_1                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_2                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_3                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_4                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_5                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_6                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/O_data_reg_7                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| data_rf/_n0030<1>1                                     |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_rf/_n0030<2>1                                     |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_rf/_n0030<3>1                                     |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n0030<4>1                                     |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| data_rf/_n0030<5>1                                     |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n0030<6>1                                     |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n0030<7>1                                     |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n0030<8>1                                     |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n003111                                       |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n0037_inv1                                    |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| data_rf/_n0041_inv1                                    |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| decoder/O_d                                            |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_en                                           |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_lbl                                          |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r0_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r1_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r2_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r3_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r4_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_r5_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_s_0                                          |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_s_1                                          |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_sb_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_sb_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| decoder/O_we                                           |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| en_out_reg/O_eno                                       |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| en_out_reg/O_eno_rstpot                                |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| en_reg/O_eni                                           |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/I_en[0]_I_en_cmp_OR_2_o1                        |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| incr_a/Madd_I_addr[15]_GND_15_o_add_0_OUT_cy<3>        |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_a/Madd_I_addr[15]_GND_15_o_add_0_OUT_cy<7>        |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_a/Madd_I_addr[15]_GND_15_o_add_0_OUT_lut<0>_INV_0 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| incr_a/Madd_I_addr[15]_GND_15_o_add_0_OUT_xor<10>      |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_a/O_next_addr_0                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_1                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_10                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_2                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_3                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_4                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_5                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_6                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_7                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_8                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_a/O_next_addr_9                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/I_ptr[4]_GND_16_o_add_1_OUT<3>1                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| incr_b/I_ptr[4]_GND_16_o_add_1_OUT<4>1                 |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_cy<11>       |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_cy<3>        |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_cy<7>        |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_lut<0>_INV_0 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_xor<15>      |       0.00 | CARRY4 |       Async | Async       |         0.0 |
+| incr_b/Madd_I_ptr[4]_GND_16_o_add_1_OUT_xor<0>11_INV_0 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| incr_b/Madd_I_ptr[4]_GND_16_o_add_1_OUT_xor<1>11       |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| incr_b/Madd_I_ptr[4]_GND_16_o_add_1_OUT_xor<2>11       |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| incr_b/O_next_addr_0                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_1                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_10                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_11                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_12                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_13                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_14                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_15                                  |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_2                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_3                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_4                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_5                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_6                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_7                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_8                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_addr_9                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_ptr_0                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_ptr_1                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_ptr_2                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_ptr_3                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| incr_b/O_next_ptr_4                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| lbl_reg/O_lbl                                          |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr<1>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<2>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<3>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<4>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<5>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<6>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<7>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<8>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr<9>_rt                                 |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| pc_reg/O_PC_incr_0                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_1                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_10                                    |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_2                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_3                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_4                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_5                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_6                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_7                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_8                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| pc_reg/O_PC_incr_9                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| ptr_reg/O_ptr_buff_0                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| ptr_reg/O_ptr_buff_1                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| ptr_reg/O_ptr_buff_2                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| ptr_reg/O_ptr_buff_3                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| ptr_reg/O_ptr_buff_4                                   |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r0_reg/O_row_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r1_reg/O_row_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r2_reg/O_row_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r3_reg/O_row_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r4_reg/O_row_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_0                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_1                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_2                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_3                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_4                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_5                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_6                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_7                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| r5_reg/O_row_8                                         |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| s_reg/O_s_0                                            |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| s_reg/O_s_1                                            |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| sb_reg/O_sb_0                                          |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| sb_reg/O_sb_1                                          |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| set_bit_register/Mmux_I_sb_cm[1]_I_sb[1]_mux_0_OUT11   |       0.00 | LUT5   |       Async | Async       |         0.0 |
+| set_bit_register/Mmux_I_sb_cm[1]_I_sb[1]_mux_0_OUT21   |       0.00 | LUT6   |       Async | Async       |         0.0 |
+| set_bit_register/O_sb_0                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| set_bit_register/O_sb_1                                |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| size_reg/O_size_0                                      |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| size_reg/O_size_1                                      |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| size_reg/O_size_2                                      |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| size_reg/O_size_3                                      |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| size_reg/O_size_4                                      |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| we_out_reg/O_weo_0                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| we_out_reg/O_weo_1                                     |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+| we_reg/O_we_dir                                        |       0.00 | FF     |         0.0 | I_clk_BUFGP |         0.0 |
+|                                                        |            |        |             |             |             |
+| Total                                                  |       0.00 |        |             |             |             |
+--------------------------------------------------------------------------------------------------------------------------
+
+3.3.1.2.  Signals
+--------------------------------------------------------------------------------------------------------------------------------------------------
+|                     Signals                      | Power (mW) | Signal Rate | % High | Fanout | Slice Fanout |    Clock    |    Logic Type     |
+--------------------------------------------------------------------------------------------------------------------------------------------------
+| CM_DECODE<0>                                     |       0.00 |        0.00 |   50.0 |      8 |            8 | I_clk_BUFGP | NA                |
+| CM_DECODE<10>                                    |       0.00 |        0.00 |   50.0 |      8 |            8 | I_clk_BUFGP | NA                |
+| CM_DECODE<11>                                    |       0.00 |        0.00 |   50.0 |      8 |            8 | I_clk_BUFGP | NA                |
+| CM_DECODE<12>                                    |       0.00 |        0.00 |   50.0 |      8 |            8 | I_clk_BUFGP | NA                |
+| CM_DECODE<13>                                    |       0.00 |        0.00 |   50.0 |      8 |            8 | I_clk_BUFGP | NA                |
+| CM_DECODE<14>                                    |       0.00 |        0.00 |   50.0 |      7 |            7 | I_clk_BUFGP | NA                |
+| CM_DECODE<15>                                    |       0.00 |        0.00 |   50.0 |      7 |            7 | I_clk_BUFGP | NA                |
+| CM_DECODE<17>                                    |       0.00 |        0.00 |   50.0 |      8 |            8 | I_clk_BUFGP | NA                |
+| I_data_cpu_0_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_1_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_2_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_3_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_4_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_5_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_6_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_cpu_7_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_size_0_IBUF                               |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_size_1_IBUF                               |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_size_2_IBUF                               |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_size_3_IBUF                               |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_size_4_IBUF                               |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_0_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_1_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_2_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_3_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_4_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_5_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_6_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_data_uct_7_IBUF                                |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_en_IBUF                                        |       0.00 |        0.00 |   99.0 |     55 |           24 | I_clk_BUFGP | FF, OLOGIC2_OUTFF |
+| I_sb_0_IBUF                                      |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_sb_1_IBUF                                      |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_tile_id_0_IBUF                                 |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_tile_id_1_IBUF                                 |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_tile_id_2_IBUF                                 |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_tile_id_3_IBUF                                 |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_tile_id_4_IBUF                                 |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_we_0_IBUF                                      |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_we_1_IBUF                                      |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| I_we_drf_IBUF                                    |       0.00 |        0.00 |   50.0 |     10 |            8 | Async       | NA                |
+| N01                                              |       0.00 |        0.00 |   89.1 |      1 |            1 | Async       | NA                |
+| N11                                              |       0.00 |        0.00 |   98.4 |      1 |            1 | Async       | NA                |
+| addr_reg/O_a_uct<0>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<10>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<11>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<12>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<13>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<14>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<15>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<1>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<2>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<3>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<4>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<5>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<6>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<7>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<8>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| addr_reg/O_a_uct<9>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| comparator/I_en[0]_I_en_cm_OR_4_o                |       0.00 |        0.00 |   62.5 |     21 |            5 | I_clk_BUFGP | FF                |
+| comparator/I_en[0]_I_en_cm_OR_4_o1               |       0.00 |        0.00 |   62.5 |      1 |            1 | I_clk_BUFGP | FF                |
+| comparator/O_en                                  |       0.00 |        0.00 |    3.1 |      1 |            1 | I_clk_BUFGP | NA                |
+| conf_mem/Mram_regs1_ENA_cooolgate_en_sig_8       |       0.00 |        0.00 |   98.3 |      1 |            1 | I_clk_BUFGP | RAMB16BWER        |
+| conf_mem/Mram_regs1_cooolgate_en_sig_2           |       0.00 |        0.00 |   99.2 |      1 |            1 | I_clk_BUFGP | NA                |
+| conf_mem/Mram_regs1_cooolgate_en_sig_4           |       0.00 |        0.00 |   99.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| d_reg/O_d                                        |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<0>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<1>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<2>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<3>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<4>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<5>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<6>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_buff<7>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<0>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<1>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<2>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<3>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<4>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<5>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<6>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/O_data_uct<7>                          |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_buff/_n0017_inv                             |       0.00 |        0.00 |   49.5 |      8 |            2 | I_clk_BUFGP | FF                |
+| data_rf/O_data_cpu<0>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<1>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<2>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<3>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<4>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<5>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<6>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_cpu<7>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<0>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<1>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<2>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<3>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<4>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<5>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<6>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/O_data_reg<7>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| data_rf/_n0030<1>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<2>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<3>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<4>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<5>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<6>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<7>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0030<8>                                |       0.00 |        0.00 |   43.8 |      1 |            1 | Async       | NA                |
+| data_rf/_n0031_0                                 |       0.00 |        0.00 |   74.2 |      8 |            1 | I_clk_BUFGP | DRAM              |
+| data_rf/_n0033<0>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<1>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<2>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<3>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<4>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<5>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<6>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0033<7>                                |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| data_rf/_n0037_inv                               |       0.00 |        0.00 |   49.5 |      8 |            1 | I_clk_BUFGP | FF                |
+| data_rf/_n0041_inv                               |       0.00 |        0.00 |   49.5 |      8 |            1 | I_clk_BUFGP | FF                |
+| decoder/O_d                                      |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_en                                     |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | FF                |
+| decoder/O_lbl                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r0<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r1<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r2<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r3<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r4<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_r5<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_s<0>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_s<1>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_sb<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_sb<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| decoder/O_we                                     |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | FF                |
+| en_out_reg/O_eno                                 |       0.00 |        0.00 |   99.2 |     65 |           24 | I_clk_BUFGP | FF                |
+| en_reg/O_eni                                     |       0.00 |        0.00 |   50.0 |      6 |            3 | I_clk_BUFGP | FF                |
+| incr_a/I_en[0]_I_en_cmp_OR_2_o                   |       0.00 |        0.00 |   27.3 |     11 |            3 | I_clk_BUFGP | FF                |
+| incr_a/Madd_I_addr[15]_GND_15_o_add_0_OUT_cy<3>  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| incr_a/Madd_I_addr[15]_GND_15_o_add_0_OUT_cy<7>  |       0.00 |        0.00 |    3.1 |      1 |            1 | Async       | NA                |
+| incr_a/O_next_addr<0>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<10>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<1>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<2>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<3>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<4>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<5>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<6>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<7>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<8>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_a/O_next_addr<9>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_cy<11> |       0.00 |        0.00 |    0.2 |      1 |            1 | Async       | NA                |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_cy<3>  |       0.00 |        0.00 |   50.0 |      1 |            1 | Async       | NA                |
+| incr_b/Madd_I_addr[15]_GND_16_o_add_0_OUT_cy<7>  |       0.00 |        0.00 |    3.1 |      1 |            1 | Async       | NA                |
+| incr_b/O_next_addr<0>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<10>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<11>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<12>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<13>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<14>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<15>                           |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<1>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<2>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<3>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<4>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<5>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<6>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<7>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<8>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_addr<9>                            |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_ptr<0>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_ptr<1>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_ptr<2>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_ptr<3>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| incr_b/O_next_ptr<4>                             |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| lbl_reg/O_lbl                                    |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<0>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<10>                             |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<1>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<2>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<3>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<4>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<5>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<6>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<7>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<8>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| pc_reg/O_PC_incr<9>                              |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| ptr_reg/O_ptr_buff<0>                            |       0.00 |        0.00 |   50.0 |     15 |            9 | I_clk_BUFGP | NA                |
+| ptr_reg/O_ptr_buff<1>                            |       0.00 |        0.00 |   50.0 |     14 |            8 | I_clk_BUFGP | NA                |
+| ptr_reg/O_ptr_buff<2>                            |       0.00 |        0.00 |   50.0 |     13 |            8 | I_clk_BUFGP | NA                |
+| ptr_reg/O_ptr_buff<3>                            |       0.00 |        0.00 |   50.0 |     11 |            6 | I_clk_BUFGP | NA                |
+| ptr_reg/O_ptr_buff<4>                            |       0.00 |        0.00 |   50.0 |     10 |            6 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r0_reg/O_row<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r1_reg/O_row<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r2_reg/O_row<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r3_reg/O_row<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r4_reg/O_row<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<0>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<1>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<2>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<3>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<4>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<5>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<6>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<7>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| r5_reg/O_row<8>                                  |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| s_reg/O_s<0>                                     |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| s_reg/O_s<1>                                     |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| sb_reg/O_sb<0>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| sb_reg/O_sb<1>                                   |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| set_bit_register/O_sb<0>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| set_bit_register/O_sb<1>                         |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| size_reg/O_size<0>                               |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| size_reg/O_size<1>                               |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| size_reg/O_size<2>                               |       0.00 |        0.00 |   50.0 |      2 |            2 | I_clk_BUFGP | NA                |
+| size_reg/O_size<3>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| size_reg/O_size<4>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| tile_reg/O_tile<0>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| tile_reg/O_tile<1>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| tile_reg/O_tile<2>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| tile_reg/O_tile<3>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| tile_reg/O_tile<4>                               |       0.00 |        0.00 |   50.0 |      1 |            1 | I_clk_BUFGP | NA                |
+| we_out_reg/O_weo<0>                              |       0.00 |        0.00 |   50.0 |      3 |            3 | I_clk_BUFGP | NA                |
+| we_out_reg/O_weo<1>                              |       0.00 |        0.00 |   50.0 |      3 |            3 | I_clk_BUFGP | NA                |
+| we_reg/O_we_dir                                  |       0.00 |        0.00 |   50.0 |     22 |           12 | I_clk_BUFGP | FF                |
+|                                                  |            |             |        |        |              |             |                   |
+| Total                                            |       0.00 |             |        |        |              |             |                   |
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.1.3.  BRAM
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|        BRAM         | Power (mW) |  Mode  | Signal Rate | Clock Name A | Clock A (MHz) | Enable Rate A (%) | Bit Width A | Write Mode A | Write Rate A (%) | Clock Name B | Clock B (MHz) | Enable Rate B (%) | Bit Width B | Write Mode B | Write Rate B (%) |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| conf_mem/Mram_regs1 |       0.00 | RAMB18 |        0.00 | I_clk_BUFGP  |          0.00 |             98.26 |           9 | WRITE_FIRST  |             0.00 | Async        |         Async |              1.00 |           0 | WRITE_FIRST  |             0.00 |
+|                     |            |        |             |              |               |                   |             |              |                  |              |               |                   |             |              |                  |
+| Total               |       0.00 |        |             |              |               |                   |             |              |                  |              |               |                   |             |              |                  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3.3.2.  IO
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+|         IO         | Power (mW) |   I/O Standard   | Signal Rate | % High | Clock (MHz) | Clock Name  | Input Pins | Output Pins | Bidir Pins | Output Enable (%) | Output Load (pF) | Data Rate | IO LOGIC SERDES | IO DELAY | IBUF LOW PWR | Vccint (mW) | Vccaux (mW) | Vcco On-Chip Termal (mW)  | Input Term. Type | Input R/RDIFF | Output Term. Type | Output R/RDIFF | Output RS | Vcco Supply Current (mA) |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| I_clk              |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<0>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<1>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<2>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<3>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<4>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<5>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<6>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_cpu<7>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_size<0>     |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_size<1>     |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_size<2>     |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_size<3>     |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_size<4>     |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<0>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<1>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<2>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<3>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<4>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<5>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<6>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_data_uct<7>      |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_en               |       0.00 | LVCMOS25         |        0.00 |   99.0 |        0.00 | I_clk_BUFGP |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_sb<0>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_sb<1>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_tile_id<0>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_tile_id<1>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_tile_id<2>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_tile_id<3>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_tile_id<4>       |       0.00 | LVCMOS25         |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          1 |           0 |          0 |                NA |                0 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_we<0>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_we<1>            |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| I_we_drf           |       0.00 | LVCMOS25         |        0.00 |   50.0 |       Async | Async       |          1 |           0 |          0 |                NA |                0 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_d                |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<0>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<1>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<2>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<3>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<4>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<5>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<6>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_cpu<7>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<0>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<1>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<2>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<3>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<4>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<5>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<6>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_data_uct<7>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_lbl              |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<2>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<3>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<4>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<5>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<6>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<7>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r0<8>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<2>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<3>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<4>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<5>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<6>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<7>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r1<8>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<2>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<3>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<4>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<5>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<6>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<7>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r2<8>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<2>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<3>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<4>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<5>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<6>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<7>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r3<8>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<2>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<3>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<4>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<5>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<6>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<7>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r4<8>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<2>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<3>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<4>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<5>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<6>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<7>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_r5<8>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<0>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<10>     |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<11>     |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<12>     |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<13>     |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<14>     |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<15>     |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<1>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<2>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<3>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<4>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<5>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<6>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<7>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<8>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_row_addr<9>      |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_s<0>             |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_s<1>             |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_sb<0>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_sb<1>            |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_tile_id<0>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_tile_id<1>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_tile_id<2>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_tile_id<3>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_tile_id<4>       |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | Yes             | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+| O_we               |       0.00 | LVCMOS25_12_SLOW |        0.00 |   50.0 |        0.00 | I_clk_BUFGP |          0 |           1 |          0 |                NA |                5 | SDR       | No              | Off      | No           |        0.00 |        0.00 |                      0.00 | None             |            NA | None              |             NA |        NA |                     0.00 |
+|                    |            |                  |             |        |             |             |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+| Internal VREFs (0) |       0.00 |                  |             |        |             |             |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+|                    |            |                  |             |        |             |             |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+| Total              |       0.00 |                  |             |        |             |             |            |             |            |                   |                  |           |                 |          |              |             |             |                           |                  |               |                   |                |           |                          |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4.  Warnings
+--------------------------------------------------------------------------------
+WARNING:PowerEstimator:270 - Power estimate is considered inaccurate. To see details, generate an advanced report with the "-v" switch.
+WARNING:Power:1337 - Clock frequency for clock net "I_clk_BUFGP" is zero.
+WARNING:Power:1337 - Clock frequency for clock net "I_clk_BUFGP/IBUFG" is zero.
+WARNING:Power:1369 - Clock frequency for one or more clocks was not found through
+timing constraints (PCF file) or simulation data.  Without knowing the
+clock frequency of all clocks, dynamic power information for those clock
+domains will default to zero which may under-estimate the power for this
+design.  To avoid this warning, provide at least one of the following:
+  1. The proper timing constraints (PERIOD) for clocks (re-implement design
+     and load the newly generated PCF file into XPower Analyzer)
+  2. A post PAR simulation-generated VCD or SAIF file indicating clock
+     frequencies
+  3. The clock frequency for clocks in the "By Type -> Clocks" view in the
+     XPower Analyzer GUI and then applying "Update Power Analysis"
+--------------------------------------------------------------------------------
+
+Analysis completed: Mon Oct 10 17:03:39 2022
+----------------------------------------------------------------

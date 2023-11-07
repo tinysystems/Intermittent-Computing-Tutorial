@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/ise/viadotto-mc/configurator.ncd
+OUTFILE=/home/ise/viadotto-mc/configurator.bit
+FAMILY=Spartan6 Lower Power
+PART=xc6slx16l-1lcsg324
+WORKINGDIR=/home/ise/viadotto-mc
+LICENSE=WebPack
+USER_INFO=212564038_0_0_324

@@ -1,0 +1,51 @@
+Release 14.7 Physical Synthesis Report P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc. All rights reserved.
+
+TABLE OF CONTENTS
+  1) Physical Synthesis Options Summary
+  2) Optimizations statistics and details
+
+
+=========================================================================
+*                 Physical Synthesis Options Summary                    *
+=========================================================================
+---- Options
+Global Optimization                 : OFF
+    Retiming                        : OFF
+    Equivalent Register Removal     : OFF
+Timing-Driven Packing and Placement : ON
+    Logic Optimization              : OFF
+    Register Duplication            : OFF
+
+---- Intelligent clock gating       : ON
+
+---- Target Parameters
+Target Device                       : 6slx16lcsg324-1l
+
+=========================================================================
+
+
+=========================================================================
+*                        Optimizations                                  *
+=========================================================================
+---- Statistics
+
+   Number of Slice registers gated                           : 0               
+   Number of BRAM Ports gated                                : 1               
+   Number of clock enable net processed                      : 9               
+   Number of Flops added for Enable Generation               : 2               
+
+
+---- Details
+
+
+
+Component Name                                    | Type      | CE Name                         | Objective 
+--------------------------------------------------|-----------|---------------------------------|-----------
+conf_mem/Mram_regs1                               | BRAM      | conf_mem/Mram_regs1_ENA_cooolgate_en_sig_8| Power     
+
+
+   Flops added for Enable Generation                       
+-------------------------
+       conf_mem/Mram_regs1_cooolgate_en_gate_2_cooolDelFlop                            
+       conf_mem/Mram_regs1_cooolgate_en_gate_5_cooolDelFlop                            

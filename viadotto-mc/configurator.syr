@@ -1,0 +1,855 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.01 secs
+ 
+--> 
+Reading design: configurator.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "configurator.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "configurator"
+Output Format                      : NGC
+Target Device                      : xc6slx16l-1L-csg324
+
+---- Source Options
+Top Module Name                    : configurator
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/viadotto-mc/WE_out_reg2_1.vhd" into library work
+Parsing entity <WE_out_reg2_1>.
+Parsing architecture <Behavioral> of entity <we_out_reg2_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/WE_ins_reg1_1.vhd" into library work
+Parsing entity <WE_ins_reg1_1>.
+Parsing architecture <Behavioral> of entity <we_ins_reg1_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/tile_reg5_1.vhd" into library work
+Parsing entity <tile_reg5_1>.
+Parsing architecture <Behavioral> of entity <tile_reg5_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/S_ins_reg2_1.vhd" into library work
+Parsing entity <S_ins_reg2_1>.
+Parsing architecture <Behavioral> of entity <s_ins_reg2_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/size_reg16_1.vhd" into library work
+Parsing entity <size_reg5_1>.
+Parsing architecture <Behavioral> of entity <size_reg5_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/SB_reg2_1.vhd" into library work
+Parsing entity <SB_reg2_1>.
+Parsing architecture <Behavioral> of entity <sb_reg2_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/SB_ins_reg2_1.vhd" into library work
+Parsing entity <SB_ins_reg2_1>.
+Parsing architecture <Behavioral> of entity <sb_ins_reg2_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/R0_ins_reg9_1.vhd" into library work
+Parsing entity <R_ins_reg9_1>.
+Parsing architecture <Behavioral> of entity <r_ins_reg9_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/PTR_reg5_1.vhd" into library work
+Parsing entity <PTR_reg5_1>.
+Parsing architecture <Behavioral> of entity <ptr_reg5_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/PC_reg16_1.vhd" into library work
+Parsing entity <PC_reg16_1>.
+Parsing architecture <Behavioral> of entity <pc_reg16_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/LBL_ins_reg1_1.vhd" into library work
+Parsing entity <LBL_ins_reg1_1>.
+Parsing architecture <Behavioral> of entity <lbl_ins_reg1_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/incrementor_b.vhd" into library work
+Parsing entity <incrementor_b>.
+Parsing architecture <Behavioral> of entity <incrementor_b>.
+Parsing VHDL file "/home/ise/viadotto-mc/incrementor.vhd" into library work
+Parsing entity <incrementor_a>.
+Parsing architecture <Behavioral> of entity <incrementor_a>.
+Parsing VHDL file "/home/ise/viadotto-mc/EN_out_reg1_1.vhd" into library work
+Parsing entity <EN_out_reg1_1>.
+Parsing architecture <Behavioral> of entity <en_out_reg1_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/EN_ins_reg1_1.vhd" into library work
+Parsing entity <EN_ins_reg1_1>.
+Parsing architecture <Behavioral> of entity <en_ins_reg1_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/D_ins_reg1_1.vhd" into library work
+Parsing entity <D_ins_reg1_1>.
+Parsing architecture <Behavioral> of entity <d_ins_reg1_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/decoder.vhd" into library work
+Parsing entity <decoder>.
+Parsing architecture <Behavioral> of entity <decoder>.
+Parsing VHDL file "/home/ise/viadotto-mc/DBUF_reg8_32768.vhd" into library work
+Parsing entity <DBUF_reg8_32768>.
+Parsing architecture <Behavioral> of entity <dbuf_reg8_32768>.
+Parsing VHDL file "/home/ise/viadotto-mc/DBUF_reg8_1.vhd" into library work
+Parsing entity <DBUF_reg8_1>.
+Parsing architecture <Behavioral> of entity <dbuf_reg8_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/comparator.vhd" into library work
+Parsing entity <comparator>.
+Parsing architecture <Behavioral> of entity <comparator>.
+Parsing VHDL file "/home/ise/viadotto-mc/CM_reg32_1024.vhd" into library work
+Parsing entity <CM_reg64_1024>.
+Parsing architecture <Behavioral> of entity <cm_reg64_1024>.
+Parsing VHDL file "/home/ise/viadotto-mc/adr_reg16_1.vhd" into library work
+Parsing entity <adr_reg16_1>.
+Parsing architecture <Behavioral> of entity <adr_reg16_1>.
+Parsing VHDL file "/home/ise/viadotto-mc/configurator.vhd" into library work
+Parsing entity <configurator>.
+Parsing architecture <Structural> of entity <configurator>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <configurator> (architecture <Structural>) from library <work>.
+
+Elaborating entity <SB_reg2_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DBUF_reg8_32768> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <DBUF_reg8_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PTR_reg5_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <PC_reg16_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <adr_reg16_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <size_reg5_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <tile_reg5_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <WE_out_reg2_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <EN_out_reg1_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <incrementor_a> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <incrementor_b> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <comparator> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <CM_reg64_1024> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <decoder> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <EN_ins_reg1_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <LBL_ins_reg1_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <D_ins_reg1_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <WE_ins_reg1_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <S_ins_reg2_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <SB_ins_reg2_1> (architecture <Behavioral>) from library <work>.
+
+Elaborating entity <R_ins_reg9_1> (architecture <Behavioral>) from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <configurator>.
+    Related source file is "/home/ise/viadotto-mc/configurator.vhd".
+    Summary:
+	no macro.
+Unit <configurator> synthesized.
+
+Synthesizing Unit <SB_reg2_1>.
+    Related source file is "/home/ise/viadotto-mc/SB_reg2_1.vhd".
+    Found 2-bit register for signal <O_sb>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <SB_reg2_1> synthesized.
+
+Synthesizing Unit <DBUF_reg8_32768>.
+    Related source file is "/home/ise/viadotto-mc/DBUF_reg8_32768.vhd".
+WARNING:Xst:3015 - Contents of array <regs> may be accessed with an index that does not cover the full array size or with a negative index. The RAM size is reduced to the index upper access or for only positive index values.
+    Found 32x8-bit single-port RAM <Mram_regs> for signal <regs>.
+    Found 8-bit register for signal <O_data_cpu>.
+    Found 8-bit register for signal <O_data_reg>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <DBUF_reg8_32768> synthesized.
+
+Synthesizing Unit <DBUF_reg8_1>.
+    Related source file is "/home/ise/viadotto-mc/DBUF_reg8_1.vhd".
+    Found 8-bit register for signal <O_data_buff>.
+    Found 8-bit register for signal <O_data_uct>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <DBUF_reg8_1> synthesized.
+
+Synthesizing Unit <PTR_reg5_1>.
+    Related source file is "/home/ise/viadotto-mc/PTR_reg5_1.vhd".
+    Found 5-bit register for signal <O_ptr_cmp>.
+    Found 5-bit register for signal <O_ptr_incr>.
+    Found 5-bit register for signal <O_ptr_buff>.
+    Summary:
+	inferred  15 D-type flip-flop(s).
+Unit <PTR_reg5_1> synthesized.
+
+Synthesizing Unit <PC_reg16_1>.
+    Related source file is "/home/ise/viadotto-mc/PC_reg16_1.vhd".
+    Found 16-bit register for signal <O_PC_incr>.
+    Found 16-bit register for signal <O_PC_cm>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <PC_reg16_1> synthesized.
+
+Synthesizing Unit <adr_reg16_1>.
+    Related source file is "/home/ise/viadotto-mc/adr_reg16_1.vhd".
+    Found 16-bit register for signal <O_a_incr>.
+    Found 16-bit register for signal <O_a_uct>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <adr_reg16_1> synthesized.
+
+Synthesizing Unit <size_reg5_1>.
+    Related source file is "/home/ise/viadotto-mc/size_reg16_1.vhd".
+    Found 5-bit register for signal <O_size>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <size_reg5_1> synthesized.
+
+Synthesizing Unit <tile_reg5_1>.
+    Related source file is "/home/ise/viadotto-mc/tile_reg5_1.vhd".
+    Found 5-bit register for signal <O_tile>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <tile_reg5_1> synthesized.
+
+Synthesizing Unit <WE_out_reg2_1>.
+    Related source file is "/home/ise/viadotto-mc/WE_out_reg2_1.vhd".
+    Found 2-bit register for signal <O_weo>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <WE_out_reg2_1> synthesized.
+
+Synthesizing Unit <EN_out_reg1_1>.
+    Related source file is "/home/ise/viadotto-mc/EN_out_reg1_1.vhd".
+    Found 1-bit register for signal <O_eno>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <EN_out_reg1_1> synthesized.
+
+Synthesizing Unit <incrementor_a>.
+    Related source file is "/home/ise/viadotto-mc/incrementor.vhd".
+    Found 16-bit register for signal <O_next_addr>.
+    Found 16-bit adder for signal <I_addr[15]_GND_15_o_add_0_OUT> created at line 1241.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <incrementor_a> synthesized.
+
+Synthesizing Unit <incrementor_b>.
+    Related source file is "/home/ise/viadotto-mc/incrementor_b.vhd".
+    Found 5-bit register for signal <O_next_ptr>.
+    Found 16-bit register for signal <O_next_addr>.
+    Found 16-bit adder for signal <I_addr[15]_GND_16_o_add_0_OUT> created at line 1241.
+    Found 5-bit adder for signal <I_ptr[4]_GND_16_o_add_1_OUT> created at line 1241.
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+Unit <incrementor_b> synthesized.
+
+Synthesizing Unit <comparator>.
+    Related source file is "/home/ise/viadotto-mc/comparator.vhd".
+    Found 1-bit register for signal <O_en>.
+    Found 5-bit subtractor for signal <GND_17_o_GND_17_o_sub_1_OUT<4:0>> created at line 1308.
+    Found 5-bit comparator equal for signal <I_a[4]_GND_17_o_equal_2_o> created at line 47
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <comparator> synthesized.
+
+Synthesizing Unit <CM_reg64_1024>.
+    Related source file is "/home/ise/viadotto-mc/CM_reg32_1024.vhd".
+WARNING:Xst:647 - Input <I_pc<15:11>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2999 - Signal 'regs', unconnected in block 'CM_reg64_1024', is tied to its initial value.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <regs>, simulation mismatch.
+    Found 1025x64-bit single-port Read Only RAM <Mram_regs> for signal <regs>.
+    Found 64-bit register for signal <O_instr>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  64 D-type flip-flop(s).
+Unit <CM_reg64_1024> synthesized.
+
+Synthesizing Unit <decoder>.
+    Related source file is "/home/ise/viadotto-mc/decoder.vhd".
+WARNING:Xst:647 - Input <I_instr<63:62>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <O_lbl>.
+    Found 1-bit register for signal <O_d>.
+    Found 1-bit register for signal <O_we>.
+    Found 2-bit register for signal <O_s>.
+    Found 2-bit register for signal <O_sb>.
+    Found 9-bit register for signal <O_r0>.
+    Found 9-bit register for signal <O_r1>.
+    Found 9-bit register for signal <O_r2>.
+    Found 9-bit register for signal <O_r3>.
+    Found 9-bit register for signal <O_r4>.
+    Found 9-bit register for signal <O_r5>.
+    Found 1-bit register for signal <O_en>.
+    Summary:
+	inferred  62 D-type flip-flop(s).
+Unit <decoder> synthesized.
+
+Synthesizing Unit <EN_ins_reg1_1>.
+    Related source file is "/home/ise/viadotto-mc/EN_ins_reg1_1.vhd".
+    Found 1-bit register for signal <O_eni>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <EN_ins_reg1_1> synthesized.
+
+Synthesizing Unit <LBL_ins_reg1_1>.
+    Related source file is "/home/ise/viadotto-mc/LBL_ins_reg1_1.vhd".
+    Found 1-bit register for signal <O_lbl>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <LBL_ins_reg1_1> synthesized.
+
+Synthesizing Unit <D_ins_reg1_1>.
+    Related source file is "/home/ise/viadotto-mc/D_ins_reg1_1.vhd".
+    Found 1-bit register for signal <O_d>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <D_ins_reg1_1> synthesized.
+
+Synthesizing Unit <WE_ins_reg1_1>.
+    Related source file is "/home/ise/viadotto-mc/WE_ins_reg1_1.vhd".
+    Register <O_we> equivalent to <O_we_dir> has been removed
+    Found 1-bit register for signal <O_we_dir>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <WE_ins_reg1_1> synthesized.
+
+Synthesizing Unit <S_ins_reg2_1>.
+    Related source file is "/home/ise/viadotto-mc/S_ins_reg2_1.vhd".
+    Found 2-bit register for signal <O_s>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <S_ins_reg2_1> synthesized.
+
+Synthesizing Unit <SB_ins_reg2_1>.
+    Related source file is "/home/ise/viadotto-mc/SB_ins_reg2_1.vhd".
+    Found 2-bit register for signal <O_sb>.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+Unit <SB_ins_reg2_1> synthesized.
+
+Synthesizing Unit <R_ins_reg9_1>.
+    Related source file is "/home/ise/viadotto-mc/R0_ins_reg9_1.vhd".
+    Found 9-bit register for signal <O_row>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <R_ins_reg9_1> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1025x64-bit single-port Read Only RAM                 : 1
+ 32x8-bit single-port RAM                              : 1
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 2
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 45
+ 1-bit register                                        : 10
+ 16-bit register                                       : 6
+ 2-bit register                                        : 6
+ 5-bit register                                        : 6
+ 64-bit register                                       : 1
+ 8-bit register                                        : 4
+ 9-bit register                                        : 12
+# Comparators                                          : 1
+ 5-bit comparator equal                                : 1
+# Multiplexers                                         : 5
+ 16-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <O_a_uct_6> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_6> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_7> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_7> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_8> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_8> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_9> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_9> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_10> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_10> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_11> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_11> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_12> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_12> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_13> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_13> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_14> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_14> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_15> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_15> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_0> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_0> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_1> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_1> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_2> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_2> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_3> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_3> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_4> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_4> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_5> in Unit <addr_reg> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_5> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_10> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_10> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_11> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_11> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_12> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_12> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_13> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_13> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_14> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_14> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_15> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_15> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_0> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_0> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_1> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_1> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_2> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_2> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_3> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_3> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_4> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_4> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_5> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_5> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_6> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_6> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_7> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_7> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_8> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_8> 
+INFO:Xst:2261 - The FF/Latch <O_PC_cm_9> in Unit <pc_reg> is equivalent to the following FF/Latch, which will be removed : <O_PC_incr_9> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_0> in Unit <ptr_reg> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_0> <O_ptr_incr_0> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_1> in Unit <ptr_reg> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_1> <O_ptr_incr_1> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_2> in Unit <ptr_reg> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_2> <O_ptr_incr_2> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_3> in Unit <ptr_reg> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_3> <O_ptr_incr_3> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_4> in Unit <ptr_reg> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_4> <O_ptr_incr_4> 
+WARNING:Xst:2677 - Node <O_instr_62> of sequential type is unconnected in block <conf_mem>.
+WARNING:Xst:2677 - Node <O_instr_63> of sequential type is unconnected in block <conf_mem>.
+
+Synthesizing (advanced) Unit <DBUF_reg8_32768>.
+INFO:Xst:3231 - The small RAM <Mram_regs> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32-word x 8-bit                     |          |
+    |     clkA           | connected to signal <I_clk>         | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <I_ptr>         |          |
+    |     diA            | connected to signal <_n0030>        |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <DBUF_reg8_32768> synthesized (advanced).
+
+Synthesizing (advanced) Unit <configurator>.
+INFO:Xst:3226 - The RAM <conf_mem/Mram_regs> will be implemented as a BLOCK RAM, absorbing the following register(s): <conf_mem/O_instr>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1025-word x 64-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <I_clk>         | rise     |
+    |     enA            | connected to signal <EN_CONFMEM_OUT> | high     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <PC_CONFMEM>    |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <CM_DECODE>     |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <configurator> synthesized (advanced).
+WARNING:Xst:2677 - Node <pc_reg/O_PC_cm_11> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_cm_12> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_cm_13> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_cm_14> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_cm_15> of sequential type is unconnected in block <configurator>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 1025x64-bit single-port block Read Only RAM           : 1
+ 32x8-bit single-port distributed RAM                  : 1
+# Adders/Subtractors                                   : 4
+ 16-bit adder                                          : 2
+ 5-bit adder                                           : 1
+ 5-bit subtractor                                      : 1
+# Registers                                            : 283
+ Flip-Flops                                            : 283
+# Comparators                                          : 1
+ 5-bit comparator equal                                : 1
+# Multiplexers                                         : 5
+ 16-bit 2-to-1 multiplexer                             : 2
+ 2-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <O_a_uct_6> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_6> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_7> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_7> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_8> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_8> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_9> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_9> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_10> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_10> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_11> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_11> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_12> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_12> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_13> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_13> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_14> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_14> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_15> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_15> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_0> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_0> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_1> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_1> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_2> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_2> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_3> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_3> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_4> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_4> 
+INFO:Xst:2261 - The FF/Latch <O_a_uct_5> in Unit <adr_reg16_1> is equivalent to the following FF/Latch, which will be removed : <O_a_incr_5> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_0> in Unit <PTR_reg5_1> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_0> <O_ptr_incr_0> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_1> in Unit <PTR_reg5_1> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_1> <O_ptr_incr_1> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_2> in Unit <PTR_reg5_1> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_2> <O_ptr_incr_2> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_3> in Unit <PTR_reg5_1> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_3> <O_ptr_incr_3> 
+INFO:Xst:2261 - The FF/Latch <O_ptr_buff_4> in Unit <PTR_reg5_1> is equivalent to the following 2 FFs/Latches, which will be removed : <O_ptr_cmp_4> <O_ptr_incr_4> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_5> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_5> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_6> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_6> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_7> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_7> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_8> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_8> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_9> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_9> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_10> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_10> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_0> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_0> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_1> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_1> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_2> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_2> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_3> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_3> 
+INFO:Xst:2261 - The FF/Latch <pc_reg/O_PC_incr_4> in Unit <configurator> is equivalent to the following FF/Latch, which will be removed : <pc_reg/O_PC_cm_4> 
+
+Optimizing unit <decoder> ...
+
+Optimizing unit <R_ins_reg9_1> ...
+
+Optimizing unit <configurator> ...
+
+Optimizing unit <adr_reg16_1> ...
+
+Optimizing unit <DBUF_reg8_32768> ...
+
+Optimizing unit <DBUF_reg8_1> ...
+
+Optimizing unit <incrementor_a> ...
+
+Optimizing unit <incrementor_b> ...
+WARNING:Xst:2677 - Node <pc_reg/O_PC_incr_11> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_incr_12> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_incr_13> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_incr_14> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <pc_reg/O_PC_incr_15> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <incr_a/O_next_addr_15> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <incr_a/O_next_addr_14> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <incr_a/O_next_addr_13> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <incr_a/O_next_addr_12> of sequential type is unconnected in block <configurator>.
+WARNING:Xst:2677 - Node <incr_a/O_next_addr_11> of sequential type is unconnected in block <configurator>.
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs2> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs3> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs4> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs5> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs6> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs7> are equivalent, second RAM is removed
+INFO:Xst:2399 - RAMs <conf_mem/Mram_regs1>, <conf_mem/Mram_regs8> are equivalent, second RAM is removed
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block configurator, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 236
+ Flip-Flops                                            : 236
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : configurator.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 114
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 24
+#      LUT2                        : 4
+#      LUT3                        : 16
+#      LUT4                        : 9
+#      LUT5                        : 1
+#      LUT6                        : 3
+#      MUXCY                       : 25
+#      VCC                         : 1
+#      XORCY                       : 27
+# FlipFlops/Latches                : 236
+#      FD                          : 65
+#      FDE                         : 171
+# RAMS                             : 9
+#      RAM32X1S                    : 8
+#      RAMB16BWER                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 130
+#      IBUF                        : 32
+#      OBUF                        : 98
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16lcsg324-1l 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             231  out of  18224     1%  
+ Number of Slice LUTs:                   68  out of   9112     0%  
+    Number used as Logic:                60  out of   9112     0%  
+    Number used as Memory:                8  out of   2176     0%  
+       Number used as RAM:                8
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    236
+   Number with an unused Flip Flop:       5  out of    236     2%  
+   Number with an unused LUT:           168  out of    236    71%  
+   Number of fully used LUT-FF pairs:    63  out of    236    26%  
+   Number of unique control sets:        11
+
+IO Utilization: 
+ Number of IOs:                         164
+ Number of bonded IOBs:                 131  out of    232    56%  
+    IOB Flip Flops/Latches:               5
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     32     3%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+I_clk                              | BUFGP                  | 245   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -1
+
+   Minimum period: 4.967ns (Maximum Frequency: 201.317MHz)
+   Minimum input arrival time before clock: 6.204ns
+   Maximum output required time after clock: 5.805ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'I_clk'
+  Clock period: 4.967ns (frequency: 201.317MHz)
+  Total number of paths / destination ports: 771 / 408
+-------------------------------------------------------------------------
+Delay:               4.967ns (Levels of Logic = 1)
+  Source:            we_reg/O_we_dir (FF)
+  Destination:       incr_b/O_next_addr_15 (FF)
+  Source Clock:      I_clk rising
+  Destination Clock: I_clk rising
+
+  Data Path: we_reg/O_we_dir to incr_b/O_next_addr_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              22   0.732   1.568  we_reg/O_we_dir (we_reg/O_we_dir)
+     LUT3:I2->O           21   0.430   1.505  comparator/I_en[0]_I_en_cm_OR_4_o1 (comparator/I_en[0]_I_en_cm_OR_4_o)
+     FDE:CE                    0.732          incr_b/O_next_ptr_0
+    ----------------------------------------
+    Total                      4.967ns (1.894ns logic, 3.073ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'I_clk'
+  Total number of paths / destination ports: 136 / 110
+-------------------------------------------------------------------------
+Offset:              6.204ns (Levels of Logic = 2)
+  Source:            I_en (PAD)
+  Destination:       data_rf/O_data_reg_7 (FF)
+  Destination Clock: I_clk rising
+
+  Data Path: I_en to data_rf/O_data_reg_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            54   1.594   2.340  I_en_IBUF (I_en_IBUF)
+     LUT2:I0->O            8   0.454   1.084  data_rf/_n0041_inv1 (data_rf/_n0041_inv)
+     FDE:CE                    0.732          data_rf/O_data_reg_0
+    ----------------------------------------
+    Total                      6.204ns (2.780ns logic, 3.424ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'I_clk'
+  Total number of paths / destination ports: 98 / 98
+-------------------------------------------------------------------------
+Offset:              5.805ns (Levels of Logic = 1)
+  Source:            we_reg/O_we_dir (FF)
+  Destination:       O_we (PAD)
+  Source Clock:      I_clk rising
+
+  Data Path: we_reg/O_we_dir to O_we
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q              22   0.732   1.533  we_reg/O_we_dir (we_reg/O_we_dir)
+     OBUF:I->O                 3.540          O_we_OBUF (O_we)
+    ----------------------------------------
+    Total                      5.805ns (4.272ns logic, 1.533ns route)
+                                       (73.6% logic, 26.4% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock I_clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+I_clk          |    4.967|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 10.00 secs
+Total CPU time to Xst completion: 1.82 secs
+ 
+--> 
+
+
+Total memory usage is 490536 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   22 (   0 filtered)
+Number of infos    :   78 (   0 filtered)
+

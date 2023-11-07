@@ -1,0 +1,22 @@
+xst -intstyle ise -ifn "/home/ise/ttt/configurator.xst" -ofn "/home/ise/ttt/configurator.syr" 
+netgen -intstyle ise -ar Structure -tm configurator -w -dir netgen/synthesis -ofmt vhdl -sim configurator.ngc configurator_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4l-tqg144-1L configurator.ngc configurator.ngd  
+map -intstyle ise -p xc6slx4l-tqg144-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power high -o configurator_map.ncd configurator.ngd configurator.pcf 
+xst -intstyle ise -ifn "/home/ise/ttt/configurator.xst" -ofn "/home/ise/ttt/configurator.syr" 
+netgen -intstyle ise -ar Structure -tm configurator -w -dir netgen/synthesis -ofmt vhdl -sim configurator.ngc configurator_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx9l-tqg144-1L configurator.ngc configurator.ngd  
+map -intstyle ise -p xc6slx9l-tqg144-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power high -o configurator_map.ncd configurator.ngd configurator.pcf 
+xst -intstyle ise -ifn "/home/ise/ttt/configurator.xst" -ofn "/home/ise/ttt/configurator.syr" 
+netgen -intstyle ise -ar Structure -tm configurator -w -dir netgen/synthesis -ofmt vhdl -sim configurator.ngc configurator_synthesis.vhd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16l-csg324-1L configurator.ngc configurator.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power high -o configurator_map.ncd configurator.ngd configurator.pcf 
+par -w -intstyle ise -ol high -power on configurator_map.ncd configurator.ncd configurator.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml configurator.twx configurator.ncd -o configurator.twr configurator.pcf 
+xpwr -intstyle ise -v -l 1000 -ol std configurator.ncd configurator.pcf -o configurator.pwr 
+netgen -intstyle ise -s 1L  -pcf configurator.pcf -rpw 100 -tpw 0 -ar Structure -tm configurator -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim configurator.ncd configurator_timesim.vhd 
+xst -intstyle ise -ifn "/home/ise/viadotto-mc/configurator.xst" -ofn "/home/ise/viadotto-mc/configurator.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx16l-csg324-1L configurator.ngc configurator.ngd  
+map -intstyle ise -p xc6slx16l-csg324-1L -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power high -o configurator_map.ncd configurator.ngd configurator.pcf 
+par -w -intstyle ise -ol high -power on configurator_map.ncd configurator.ncd configurator.pcf 
+trce -intstyle ise -v 3 -s 1L -n 3 -fastpaths -xml configurator.twx configurator.ncd -o configurator.twr configurator.pcf 
+bitgen -intstyle ise -f configurator.ut configurator.ncd 

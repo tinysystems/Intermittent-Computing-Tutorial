@@ -24,7 +24,7 @@ fixed output[OUTPUT_LEN];
 FILE *fpt;
 uint8_t active_tiles = 32;
 uint16_t inputs = 32;
-char file_name[20];
+char file_name[30];
 
 
 /**
@@ -46,7 +46,7 @@ int main(void)
 #ifdef ESC
     sprintf(cnnmodel, "esc");
 #endif
-    sprintf(file_name, "mcu_to_mc_%d_%s.csv", active_tiles, cnnmodel);
+    sprintf(file_name, "../CRAM/mcu_to_mc_%d_%s.csv", active_tiles, cnnmodel);
     fpt = fopen(file_name, "w+");
     //fprintf(fpt, "OPCODE tileID size\n");
     

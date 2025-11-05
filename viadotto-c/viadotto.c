@@ -35,10 +35,18 @@ void cram_tile_disable(uint8_t tileID, FILE *fpt){
 
 void cram_load_ina(uint8_t tileID, fixed* input, uint16_t size, FILE *fpt){
 
-    fprintf(fpt,"%d %d %d\n", OPCODE_ina, tileID, size); 
+    // fprintf(fpt,"%d %d %d\n", OPCODE_ina, tileID, size); //For training presentation only 
+	
+    uint16_t counter = size;
+    while(counter > 0){
+        fprintf(fpt,"%d %d %d\n", OPCODE_ina, tileID, size);
+        counter--;
+    }	
+	
     // fixed* ptr = input;
     // uint16_t counter = size;
-    // while(counter < size){
+    // while(counter > 0){
+	//	   wait_idle();
     //     if(ptr != NULL){
     //         UCA1TXBUF = *ptr;
     //         ptr++;
@@ -58,8 +66,14 @@ void cram_load_ina(uint8_t tileID, fixed* input, uint16_t size, FILE *fpt){
 
 void cram_load_inb(uint8_t tileID, fixed* input, uint16_t size, FILE *fpt){
 
-    fprintf(fpt,"%d %d %d\n", OPCODE_inb, tileID, size);
+    // fprintf(fpt,"%d %d %d\n", OPCODE_inb, tileID, size); //For training presentation only
     
+	uint16_t counter = size;
+    while(counter > 0){
+        fprintf(fpt,"%d %d %d\n", OPCODE_inb, tileID, size);
+        counter--;
+    }
+	
     // fixed* ptr = input;
     // uint16_t counter = size;
     // while(counter > 0){
@@ -100,7 +114,14 @@ void cram_bias_enable(uint16_t size, FILE *fpt){
 
 void cram_unload_out(uint8_t tileID, fixed* output, uint16_t size, FILE *fpt){
 
-    fprintf(fpt,"%d %d %d\n", OPCODE_unload, tileID, size);
+    // fprintf(fpt,"%d %d %d\n", OPCODE_unload, tileID, size); //For training presentation only
+	
+	uint16_t counter = size;
+    while(counter > 0){
+        fprintf(fpt,"%d %d %d\n", OPCODE_unload, tileID, size);
+        counter--;
+    }
+	
     // fixed* ptr = output;
     // uint16_t counter = size;
 
